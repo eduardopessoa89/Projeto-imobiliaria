@@ -1,1 +1,11 @@
-<p>client works!</p>
+<div id ="showPanel" *ngIf="client">
+    <div>
+        {{client.name}}
+        {{client.address}}
+    </div>
+
+
+   
+
+</div>
+<div class="center"><a href="#" (click)="edit()">Editar</a> <a href="#" (click)="delete()">Remover</a></div>

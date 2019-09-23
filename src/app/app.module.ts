@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 // --------- App Modules -------
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {LoginComponent} from './menu/login/login.component'
 
 import { MenuComponent } from './menu/menu.component';
 import { ClientComponent } from './client/show-client/client.component';
@@ -23,7 +24,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     MenuComponent,
     ClientComponent,
     ClientRegisterComponent,
-    EditClientComponent
+    EditClientComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

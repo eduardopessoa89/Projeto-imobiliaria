@@ -1,1 +1,16 @@
-<p>menu works!</p>
+<mdb-navbar class ="margin" SideClass="navbar navbar-expand-lg navbar-dark info-color-dark fixed-top">
+        <mdb-navbar-brand>
+            <a class="navbar-brand" href="#">Imobiliaria do Hugo</a>
+        </mdb-navbar-brand>
+        <links>
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link active waves-light" href="#" mdbWavesEffect>Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active waves-light" [routerLink] = "['/client', 'list']" mdbWavesEffect>Clientes</a>
+                <a class="nav-item nav-link active waves-light" [routerLink] = "['/user', 'list']" mdbWavesEffect>Usuários</a>
+                <a class="nav-item nav-link active waves-light" [routerLink] = "['/property', 'list']" mdbWavesEffects>Imóveis</a>
+                <a class="nav-item nav-link active waves-light" [routerLink] = "['/agreement', 'list']" mdbWavesEffect>Contratos</a>
+
+            </div>
+        </links>
+    </mdb-navbar>
+

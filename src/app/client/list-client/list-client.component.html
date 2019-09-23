@@ -1,34 +1,39 @@
-<h1>Clientes</h1>
-<table>
-    <thead>
-      <tr>
-        <th id="nameHeader">Name</th>
-        <th id="typeHeader">Type</th>
-        <th id="statusHeader">Status</th>
-        <th colspan="4"></th>
-      </tr>
-    </thead>
-  
-    <tbody>
-      <tr *ngFor="let client of clients">
-        <td>{{client.name}}</td>
-        <td>{{client.type}}</td>
-        <td>{{client.status}}</td>
-        <td><a href="#" (click)="show(client.id)">Show</a></td>
-        <td><a href="#" (click)="edit(client.id)">Edit</a></td>
-        <td><a href="#" (click)="delete(client.id)">Delete</a></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  <a [routerLink]="['/client', 'register']">New Client</a>
-
-  <nav aria-label="Page navigation example">
-    <ul class="pagination pg-blue">
-      <li class="page-item"><a class="page-link">Previous</a></li>
-      <li class="page-item"><a class="page-link">1</a></li>
-      <li class="page-item"><a class="page-link">2</a></li>
-      <li class="page-item"><a class="page-link">3</a></li>
-      <li class="page-item"><a class="page-link">Next</a></li>
-    </ul>
-  </nav>
+<app-menu></app-menu>
+<div class= "container">
+  <h1>Clientes</h1>
+  <table class="container">
+      
+      <thead>
+        <tr>
+          <th id="nameHeader">Nome</th>
+          <th id="typeHeader">Tipo</th>
+          <th id="statusHeader">Status</th>
+          <th colspan="4"></th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        <tr *ngFor="let client of clients">
+          <td>{{client.name}}</td>
+          <td>{{client.type}}</td>
+          <td>{{client.status}}</td>
+          <td><a href="#" (click)="show(client.id)">Show</a></td>
+          <td><a href="#" (click)="edit(client.id)">Edit</a></td>
+          <td><a href="#" (click)="delete(client.id)">Delete</a></td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <button mdbBtn color="cyan" class ="button"><a [routerLink]="['/client', 'register']">New Client</a></button>
+    <div class="pagination">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination pg-blue">
+          <li class="page-item"><a class="page-link">Previous</a></li>
+          <li class="page-item"><a class="page-link">1</a></li>
+          <li class="page-item"><a class="page-link">2</a></li>
+          <li class="page-item"><a class="page-link">3</a></li>
+          <li class="page-item"><a class="page-link">Next</a></li>
+        </ul>
+      </nav>
+  </div>
+</div>

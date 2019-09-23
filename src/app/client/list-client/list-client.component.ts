@@ -24,7 +24,7 @@ export class ListClientComponent{
 
     show(id) {
       this.service.clearMessage();
-      this.router.navigate(['/client', id]);
+      this.router.navigate(['/client','show', id]);
       return false;
     }
 

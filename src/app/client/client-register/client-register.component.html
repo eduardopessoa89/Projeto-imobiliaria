@@ -1,55 +1,73 @@
-<h1>Novo Cliente</h1>
-    
-    <form #form="ngForm" novalidate>
-            {{form.valid}}
-            {{form.value|json}}
-        <div class="campo">
-            <label class="control-label sr-only" for="client_name"><i class="fa fa-check"></i>Name</label><br>
-            <input style="text-align:center" required type = text name="name" placeholder="Nome Completo" autocomplete="off" ngModel><br>
-        </div>
 
-        <div class="campo">
-            <label for="client_rg">RG</label><br>
-            <input style="text-align:center" required name="rg" placeholder="RG" ngModel>
-        </div>
-            
-        <div class="campo">
-            <label class ="control-label sr-only" for="client_rg)">Orgão Exp.</label><br>
-            <input style="text-align:center" required name="rgInfo" placeholder="Orgão Exp."  autocomplete="off" ngModel><br>
-        </div>
+    <h1><strong>Novo Cliente</strong></h1>
+        
+        <form #form="ngForm" novalidate>
+            <div class="md-form input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <label class="control-label sr-only" for="client_name"><i class="fa fa-check"></i>Name</label><br>
+                    <input style="text-align:center" id = "client_name" required type = text name="name" placeholder="Nome Completo" autocomplete="off" ngModel><br>
+                </div>
+            </div>
 
-        <div class="campo">
-            <label for="client_cpf">CPF ou CNPJ</label><br>
-            <input style="text-align:center" required name="cpf" placeholder="CPF ou CNPJ" autocomplete="off" ngModel><br>
-        </div>
-
-        <div class="campo">
-            <label for="client_telefone">Telefone</label><br>
-            <input style="text-align:center" required name="telefone" placeholder="Telefone" autocomplete="off" ngModel><br>
-        </div>
-
-        <div class="campo">
-            <label for="client_email">Email</label><br>
-            <input style="text-align:center" required name="email" placeholder="Email" autocomplete="off" ngModel><br>
-        </div>
-            
-        <div class="campo">
-            <label for="client_job">Profissão</label><br>
-            <input style="text-align:center" required name="job" placeholder="Profissão" autocomplete="off" ngModel><br>
-        </div>
-            
-        <div class="campo">
-            <label for="client_adress">Endereço</label><br>
-            <input style="text-align:center" required name="adress" placeholder="Endereço" autocomplete="off" ngModel><br>
-        </div>
-
-        <div class="campo">
-            <label for="client_type">Tipo de Cliente</label><br>
-            <input style="text-align:center" required name="type" placeholder="Tipo de cliente"  autocomplete="off" ngModel><br>
-            
-        </div>  
+            <div class="md-form input-group input-group-sm mb-4">
+                <div class="input-group-prepend">
+                    <label class ="control-label sr-only" for="client_rg">RG</label><br>
+                    <input style="text-align:center"id="client_rg" required type= text name="rg" placeholder="RG" ngModel>
+                </div>
+            </div>
                 
-    </form>
-    <br><br>
-    <button [disabled]="!form.valid">Cadastro</button>
+            <div class="md-form input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <label class ="control-label sr-only" for="client_exp">Orgão Exp.</label><br>
+                    <input style="text-align:center" id="client_exp" type= text required name="rgInfo" placeholder="Orgão Exp."  autocomplete="off" ngModel><br>
+            
+                </div>
+            </div>
+            <div class="md-form input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <label class ="control-label sr-only" for="client_cpf">CPF ou CNPJ</label><br>
+                    <input style="text-align:center" id = "client_cpf" type= text required name="cpf" placeholder="CPF ou CNPJ" autocomplete="off" ngModel><br>
+                </div>
+            </div>
+
+            <div class="md-form input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <label class ="control-label sr-only" for="client_telefone">Telefone</label><br>
+                    <input style="text-align:center" id = "client_telefone" type= text required name="telefone" placeholder="Telefone" autocomplete="off" ngModel><br>
+                </div>
+            </div>
+            <div class="md-form input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <label class ="control-label sr-only" for="client_email">Email</label><br>
+                    <input style="text-align:center" id="client_email" type= text required name="email" placeholder="Email" autocomplete="off" ngModel><br>
+            
+                </div>
+            </div>
+
+            <div class="md-form input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <label class ="control-label sr-only" for="client_job">Profissão</label><br>
+                    <input style="text-align:center" id="client_job"type= text required name="job" placeholder="Profissão" autocomplete="off" ngModel><br>
+                 </div>
+
+            </div>
+                
+            <div class="md-form input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <label class ="control-label sr-only" for="client_adress">Endereço</label><br>
+                    <input style="text-align:center" id="client_address" type= text required name="address" placeholder="Endereço" autocomplete="off" ngModel><br>
+            
+                </div>
+            </div>
+
+            <div class="md-form input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <label class ="control-label sr-only" for="client_type">Tipo de Cliente</label><br>
+                    <input style="text-align:center" type= text required name="type" placeholder="Tipo de cliente"  autocomplete="off" ngModel><br>
+                </div>
+            </div>  
+                    
+        </form>
+        <br><br>
+        <button [disabled]="!form.valid">Cadastro</button>
 
